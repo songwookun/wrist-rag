@@ -1,0 +1,50 @@
+{
+  "_help": "Edit this file to change watch replies, Notion names and prompts. Keep the {placeholders}. If you rename a notion field, rename the Notion DB property too",
+  "notion": {
+    "title": "Title",
+    "status": "Status",
+    "request": "Request",
+    "attempts": "Attempts",
+    "keywords": "Keywords",
+    "summary": "Summary",
+    "date": "Date",
+    "sources": "Sources",
+    "month": "Month",
+    "cost": "Cost",
+    "searches": "Searches",
+    "pending": "Processing",
+    "done": "Done",
+    "index_failed": "Index failed",
+    "failed": "Failed"
+  },
+  "messages": {
+    "auth_failed": "Authentication failed",
+    "bad_request": "Failed. The request format is wrong",
+    "didnt_hear": "I didn't catch that. Please say it again",
+    "busy": "Gemini is busy right now. Try again in a bit",
+    "http_failed": "Failed. {host} {code}",
+    "failed": "Failed. {name}",
+    "accepted": "Got it. Check Notion in a few minutes ({usage})",
+    "rate_limited": "Too many requests at once. Try again in a bit",
+    "budget_exceeded": "Stopped: this month's paid limit is reached. {usage}",
+    "already_done": "This request was already processed",
+    "failed_n_times": "Failed {n} times: {name}",
+    "retry_later": "Failed. I'll retry the next time you save something",
+    "index_failed": "Saved, but search indexing failed. {title}",
+    "saved": "Saved. {title} ({usage})",
+    "interrupted_twice": "Processing was interrupted twice",
+    "no_match": "That's not in your notes",
+    "load_failed": "Found it, but couldn't read Notion",
+    "paid_answer": "{answer} The free quota ran out, so this answer was paid. {spent} spent this month.",
+    "usage": "{total} of {budget} this month",
+    "paid_footer": "(Paid note, {usage})",
+    "sources_heading": "Sources",
+    "no_source": "⚠️ No search sources — the model may have written this from memory alone. Please verify",
+    "queries": "Search queries: {queries}"
+  },
+  "prompts": {
+    "note": "You are an assistant that writes research notes the user will look up later.\nResearch the request below with Google Search and summarize it.\n\nRequest: {request}\nToday: {today}\n\nOutput exactly this format. Add nothing else.\nTITLE: <a title with key search terms, under 60 characters>\nKEYWORDS: <5-8 keywords, comma-separated, include synonyms and alternate spellings>\nSUMMARY: <3-5 key sentences on one line>\nBODY:\n<body>\n\n[Body rules]\n- Only \"## Heading\" lines, \"- item\" lines, and plain sentences\n- No tables, bold, italics, code blocks, or link syntax\n- For things that change (prices, versions, rankings), add the date, e.g. \"(as of YYYY-MM)\"\n- Under 3000 characters\n- English",
+    "must_search": "\n\n[Important] Your last answer was written without Google Search. This time you MUST run\nGoogle Search first and only write what the results confirm. Do not rely on memory.",
+    "answer": "You are a voice assistant that answers ONLY from the user's personal notes ([Notes] below).\n\n[Notes]\n{notes}\n\n---\nQuestion: {question}\n\n[Strict rules]\n- Answer only from what is actually written in [Notes]. Never use outside knowledge you were trained on.\n- If it isn't in [Notes], don't guess or fill in — reply only \"{no_match}\".\n- You may combine several notes, but add no fact that is outside [Notes].\n- The watch will read this aloud. At most 3 sentences, casual and spoken.\n- Plain text only: no markdown, symbols, lists, URLs, or note titles."
+  }
+}

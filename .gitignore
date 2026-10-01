@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.vercel
+
+# 로컬 전용 (private 저장소에도 올리지 않음)
+docs/
+CLAUDE.md
+.claude/
+.env.*
+!.env.example

@@ -1,0 +1,5 @@
+{
+  "functions": {
+    "api/index.py": { "maxDuration": 60, "includeFiles": "wrist_notes/**" }
+  }
+}

@@ -1,0 +1,23 @@
+name: tests
+
+# push / PR 마다 깨끗한 머신에서 테스트. 외부 API(노션·Gemini·Pinecone)는 전부 가짜라 키가 필요 없다
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt pytest
+
+      - name: Run tests
+        run: pytest -v
