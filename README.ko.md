@@ -33,17 +33,17 @@ flowchart LR
 - **이번 달 224원.** 만들면서 한 테스트 비용까지 포함한 금액이고, 월 상한은 4,000원이다.
 - 찾기는 무료다. 답변은 Flash-Lite 무료 등급(하루 500회)으로 한다.
 
-**노션 화면** — 워치가 이걸 채운다. 상태 안내와 DB 두 개는 `scripts/setup_notion.py`가 만든다.
+**노션 화면** — 워치가 이걸 채운다. 상태 안내, 노트 DB, 맨 아래 사용량 DB(이번 달 224원, 유료 검색 10회)는 모두 `scripts/setup_notion.py`가 만든다.
 
 ![노션 화면](assets/notion-workspace.png)
 
-**노트 하나** — 요약, 키워드, 구글 검색 그라운딩에서 풀어낸 **원문 출처 링크**(`support.apple.com` 등)
+**노트 하나** — 요약, 키워드, 원래 요청, **원문 출처 링크**(`support.apple.com` 등)
 
-![출처가 달린 노트](assets/notion-note.png)
+![노트](assets/notion-note.png)
 
-**사용량 DB** — 월별 유료 비용과 검색 횟수. 유료 호출을 하기 전마다 여기를 읽어서 상한을 확인한다.
+**모든 노트 맨 아래의 근거** — 구글 검색 그라운딩에서 풀어낸 원문 주소, 모델이 실제로 실행한 검색어, 이 노트에 든 비용
 
-![사용량 DB](assets/notion-usage.png)
+![출처, 검색어, 비용](assets/notion-sources.png)
 
 ## 왜 만들었나
 

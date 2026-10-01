@@ -33,17 +33,17 @@ I run this privately with **a real paid key** and use it from my watch every day
 - **₩224 this month (~$0.15)**, which includes all the testing while building it. The monthly cap is ₩4,000.
 - Asking is free: answers use the Flash-Lite free tier (500/day).
 
-**Notion workspace** — the watch fills this in. The status guide and both databases are created by `scripts/setup_notion.py`.
+**Notion workspace** — the watch fills this in. The status guide, the notes database and the usage database at the bottom (₩224, 10 paid searches this month) are all created by `scripts/setup_notion.py`.
 
 ![Notion workspace](assets/notion-workspace.png)
 
-**A note** — summary, keywords, and **linked sources** (`support.apple.com`, …) resolved from Google Search grounding
+**A note** — summary, keywords, the original request, and **linked sources** (`support.apple.com`, …)
 
-![A note with sources](assets/notion-note.png)
+![A note](assets/notion-note.png)
 
-**Usage database** — paid cost and search count per month. The budget guard reads this before every paid call.
+**The evidence at the bottom of every note** — original URLs resolved from Google Search grounding, the search queries the model actually ran, and what this note cost
 
-![Usage database](assets/notion-usage.png)
+![Sources, search queries and cost](assets/notion-sources.png)
 
 ## Why
 
